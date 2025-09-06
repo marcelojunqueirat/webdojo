@@ -1,39 +1,32 @@
 # 🥋 WebDojo
 
-![WebDojo Cover](.github/cover.png)
+## 🚀 Anotações
 
-## 🚀 Sobre o Projeto
+### Mouseover
+npm install cypress-real-events  
+Para lidar com MOUSEOVER, não nativo cypress
+1 - deve se importa-lo no commands.js  
+2 - utilizado implementação em hover.cy.js  
 
-O **WebDojo** é um aplicativo exclusivo para os alunos do **Curso Ninja do Cypress**, ministrado pelo mestre **Fernando Papito**! 🥷💻 Ele foi criado para ser um **campo de treinamento prático**, onde os alunos podem aprimorar suas habilidades em automação de testes com desafios e exercícios focados no **Cypress**.
+### Testando PDF
+repo aplicação: https://github.com/papitodev/testing-pdf-file-cypress  
+npm install pdf-parse -D  
+1 - criado função readPdf em support/helper.js   
+2 - adicionado argumento on('task') no cypress.config -> e2e  
+3 - utilizado implementação em donwloadPDF.cy.js  
 
-🛠️ Tecnologias Utilizadas
+### Rodar toda stack de testes
 
-- [x] Git & GitHub 🌍 (Controle de versão e repositório remoto)
-- [x] Bash (Linha de Comando) 💻 (Execução de scripts e comandos)
-- [x] Visual Studio Code 🖥️ (Editor de código recomendado)
-- [x] Node.js (22+) 🟢 (Runtime JavaScript)
-- [x] Gerenciador de pacotes (npm ou yarn) 📦 (Dependências do projeto)
-- [x] Cypress 🧪 (Framework de testes end-to-end)
-- [x] Docker & Docker Compose 🐳 (Ambiente isolado para execução)
-- [x] PostgreSQL 🗄 (Banco de dados relacional)
-- [x] Use Bruno 🔌 (Cliente de API para testes de requisições)
+1 - Headless:  
+npx cypress run
 
-## 📖 Como Usar
+2 - Não Headless (execução assistida):  
+npx cypress run --headed
 
-As instruções detalhadas de instalação e uso do **WebDojo** estão disponíveis dentro do **Curso Ninja do Cypress**.
+3 - Apontando execução para determinado browser (padrão: electron)   
+npx cypress run --browser=chrome || edge || firefox
 
-🔗 **Acesse o curso e seja Ninja da Automação em Cypress!** 👉 [ninjadocypress.com.br](https://ninjadocypress.com.br)
+### Ferramentas Cypress
 
-## ⚠️ Contribuição
-
-O **WebDojo** é um ambiente **exclusivo** para os alunos do **Curso Ninja do Cypress**, e por isso, **não aceita contribuições externas**.
-
-📢 Para suporte e dúvidas, utilize os canais oficiais do curso!
-
-## 🔒 Licença
-
-Este projeto é **exclusivo para alunos** do **Curso Ninja do Cypress**. 🚫 O compartilhamento ou distribuição sem autorização é proibido.
-
-------
-
-💙 Feito com dedicação e muito café por **Fernando Papito** e a equipe do **Curso Ninja do Cypress**. 🚀🔥
+1 - Studio (gerador de teste), habilitar em cypress.config.js "experimentalStudio: true"  
+2 - Gravar vídeo do teste, habilitar em cypress.config.js "video: true"  
