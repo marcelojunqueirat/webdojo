@@ -1,0 +1,44 @@
+{
+    "personal": {
+        "name": "Marcelo Tester",
+        "email": "teste@teste.com",
+        "phone": "11998876655",
+        "consultancyType": "Individual",
+        "personType": "cpf",
+        "document": "66633399901",
+        "discoveryChannels": [
+            "Instagram",
+            "LinkedIn",
+            "Udemy",
+            "YouTube",
+            "Indicação de Amigo"
+        ],
+        "file": "./cypress/fixtures/anexoTeste.pdf",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "techs": [
+            "Cypress",
+            "Selenium",
+            "WebDriverIO",
+            "Playwright",
+            "Robot Framework"
+        ],
+        "terms": true
+    },
+    "company": {
+        "name": "Marcelo Tester",
+        "email": "teste@teste.com",
+        "phone": "11998876655",
+        "consultancyType": "In Company",
+        "personType": "cnpj",
+        "document": "72956195000159",
+        "discoveryChannels": [
+            "LinkedIn"
+        ],
+        "file": "./cypress/fixtures/anexoTeste.pdf",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "techs": [
+            "Cypress"
+        ],
+        "terms": true
+    }
+}
