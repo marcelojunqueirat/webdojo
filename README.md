@@ -26,6 +26,12 @@ npx cypress run --headed
 3 - Apontando execução para determinado browser (padrão: electron)   
 npx cypress run --browser=chrome || edge || firefox
 
+4 - Rodar suite de teste especifica
+npx cypress run --spec cypress/e2e/login.cy.js
+
+5 - Rodar teste com tamanho especifico de tela
+npx cypress run --config viewportWidth=414,viewportHeight=896
+
 ### Ferramentas Cypress
 
 1 - Studio (gerador de teste), habilitar em cypress.config.js "experimentalStudio: true"  

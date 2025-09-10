@@ -26,20 +26,10 @@
 
 import 'cypress-real-events'
 import './actions/consultancy.actions'
-
-function getTodayDate() {
-    const today = new Date()
-    const day = String(today.getDate()).padStart(2, '0')
-    const month = String(today.getMonth() + 1).padStart(2, '0')
-    const year = today.getFullYear()
-
-    return `${day}/${month}/${year}`
-}
-
+import { getTodayDate } from './utils'
 
 Cypress.Commands.add('start', () => {
-    cy.viewport(1440, 900)
-    cy.visit('http://localhost:3000')
+    cy.visit('/')
 })
 
 Cypress.Commands.add('submitLoginForm', (email, senha) => {
@@ -69,7 +59,7 @@ Cypress.Commands.add('login', (ui = false) => {
         const loginDate = getTodayDate()
 
         cy.setCookie('login_date', loginDate)
-        cy.visit('http://localhost:3000/dashboard', {
+        cy.visit('/dashboard', {
             onBeforeLoad(win) {
                 win.localStorage.setItem('token', token)
             }

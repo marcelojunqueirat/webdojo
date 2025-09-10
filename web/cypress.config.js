@@ -11,6 +11,11 @@ module.exports = defineConfig({
     },
     // defaultCommandTimeout: 10000
     experimentalStudio: true,
-    video: false
+    video: false,
+    baseUrl: 'http://localhost:3000',
+
+    //comentado pois caso tentado rodar via linha de comando com outra resolução, essa configuração sobrescreve
+    // viewportWidth: 1440,
+    // viewportHeight: 900
   },
 });
