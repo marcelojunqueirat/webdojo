@@ -35,4 +35,121 @@ npx cypress run --config viewportWidth=414,viewportHeight=896
 ### Ferramentas Cypress
 
 1 - Studio (gerador de teste), habilitar em cypress.config.js "experimentalStudio: true"  
-2 - Gravar vídeo do teste, habilitar em cypress.config.js "video: true"  
+2 - Gravar vídeo do teste, habilitar em cypress.config.js "video: true"    
+
+
+# DOCUMENTAÇÃO
+# Testes Automatizados - Webdojo (Cypress)
+
+Este repositório contém os testes automatizados da aplicação **Webdojo**, utilizando o framework [Cypress](https://www.cypress.io/).  
+A aplicação Webdojo e os testes estão no mesmo repositório.
+
+---
+
+## 📂 Estrutura do Projeto
+
+```bash
+cypress/
+ ├── e2e/                  # Diretório principal de testes (specs)
+ ├── fixtures/             # Massa de dados e arquivos de apoio
+ │   ├── anexoTeste.pdf
+ │   ├── cep.json
+ │   ├── consultancy.json
+ │   ├── example.json
+ │   └── recibo.pdf
+ └── support/              # Suporte e comandos customizados
+     ├── actions/
+     │   └── consultancy.actions.js
+     ├── commands.js
+     ├── e2e.js
+     ├── helper.js
+     └── utils.js
+```
+
+---
+
+## 🚀 Execução da Aplicação
+
+Antes de rodar os testes, é necessário executar a aplicação **Webdojo**.  
+Para isso, utilize o comando:
+
+```bash
+npm run dev
+```
+
+A aplicação será servida localmente em **http://localhost:3000**.
+
+---
+
+## 🧪 Execução dos Testes
+
+Os testes podem ser executados de diferentes formas através dos scripts configurados no `package.json`.
+
+### Executar todos os testes em modo headless
+```bash
+npm run test
+```
+Configuração de viewport: **1440x900**
+
+---
+
+### Abrir a interface do Cypress (modo interativo)
+```bash
+npm run test:ui
+```
+
+---
+
+### Executar apenas os testes de login
+```bash
+npm run test:login
+```
+Configuração de viewport: **1440x900**
+
+---
+
+### Executar os testes de login em resolução mobile
+```bash
+npm run test:login:mobile
+```
+Configuração de viewport: **414x896**
+
+---
+
+## 📑 Organização dos Testes
+
+- **Fixtures (`cypress/fixtures/`)**  
+  Contém dados mockados e arquivos de apoio para os testes, como JSONs e PDFs.
+
+- **Support (`cypress/support/`)**  
+  Centraliza código de suporte:
+  - `commands.js`: Comandos customizados do Cypress.
+  - `helper.js` e `utils.js`: Funções utilitárias.
+  - `actions/`: Arquivos de ações específicas de domínio (ex: `consultancy.actions.js`).
+
+- **Specs (`cypress/e2e/`)**  
+  Onde ficam os arquivos de testes (ex: `login.cy.js`).
+
+---
+
+## 📌 Requisitos
+
+- Node.js instalado
+- NPM ou Yarn
+- Cypress instalado como dependência do projeto
+
+---
+
+## ✅ Boas Práticas
+
+- Manter dados dinâmicos em **fixtures**.
+- Centralizar funções reutilizáveis em **support**.
+- Criar testes independentes e idempotentes.
+- Utilizar **viewport** adequada para cada cenário (desktop/mobile).
+
+---
+
+## 📖 Referências
+
+- [Documentação Oficial do Cypress](https://docs.cypress.io/)
+
