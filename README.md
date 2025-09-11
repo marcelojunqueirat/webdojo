@@ -1,6 +1,4 @@
-# 🥋 WebDojo
-
-## 🚀 Anotações
+# 🚀 Anotações
 
 ### Mouseover
 npm install cypress-real-events  
@@ -37,9 +35,9 @@ npx cypress run --config viewportWidth=414,viewportHeight=896
 1 - Studio (gerador de teste), habilitar em cypress.config.js "experimentalStudio: true"  
 2 - Gravar vídeo do teste, habilitar em cypress.config.js "video: true"    
 
-
-# DOCUMENTAÇÃO
-# Testes Automatizados - Webdojo (Cypress)
+--------------------------------------------------------------------------------  
+# Documentação
+# Testes Automatizados - 🥋 WebDojo (Cypress)
 
 Este repositório contém os testes automatizados da aplicação **Webdojo**, utilizando o framework [Cypress](https://www.cypress.io/).  
 A aplicação Webdojo e os testes estão no mesmo repositório.
