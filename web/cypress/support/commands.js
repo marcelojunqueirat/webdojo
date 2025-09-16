@@ -48,6 +48,13 @@ Cypress.Commands.add('goTo', (buttonName, pageTitle) => {
         .should('be.visible')
 })
 
+Cypress.Commands.add('goToSignup', () => {
+    cy.start()
+    cy.get('a[href="/register"]').click()
+    cy.contains('h2', 'Crie sua conta')
+        .should('be.visible')
+})
+
 // Helpers
 Cypress.Commands.add('login', (ui = false) => {
     if (ui) {

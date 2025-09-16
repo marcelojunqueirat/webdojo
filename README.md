@@ -2,7 +2,7 @@
 
 ### Mouseover
 npm install cypress-real-events  
-Para lidar com MOUSEOVER, não nativo cypress
+Para lidar com MOUSEOVER, não nativo cypress  
 1 - deve se importa-lo no commands.js  
 2 - utilizado implementação em hover.cy.js  
 
@@ -34,6 +34,24 @@ npx cypress run --config viewportWidth=414,viewportHeight=896
 
 1 - Studio (gerador de teste), habilitar em cypress.config.js "experimentalStudio: true"  
 2 - Gravar vídeo do teste, habilitar em cypress.config.js "video: true"    
+
+
+### Docker
+
+Subindo os serviços do docker-compose.yaml  
+1 - docker compose up -d  
+
+### Prisma (p/ api)
+
+Biblioteca ORM para api em node  
+1 - npm install prisma @prisma/client  
+2 - npx prisma init  
+3 - Configurar string de conn no .env (DATABASE_URL="postgresql://USER:PASSWORD@localhost:5432/BDNAME?schema=public")  
+4 - Criar "Schemas" (entities) da aplicação em schema.prisma  
+5 - Rodar a migration para criar automaticamente os schemas do passo 4 no BD (npx prisma migrate dev --name init)  
+6 - Criar prismaClient na raiz do projeto  
+Prisma pronto pra ser usado    
+
 
 --------------------------------------------------------------------------------  
 # Documentação
