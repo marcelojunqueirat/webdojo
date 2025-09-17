@@ -1,3 +1,6 @@
+import { faker } from '@faker-js/faker'
+import _ from 'lodash'
+
 describe('Expert', () => {
 
     beforeEach(() => {
@@ -23,7 +26,7 @@ describe('Expert', () => {
             .should('be.visible')
     })
 
-    it.only('Não deve logar com senha inválida', () => {
+    it('Não deve logar com senha inválida', () => {
         // cy.submitLoginForm('papito@webdojo.com', 'katana321')
 
         /* tecnica para salvar a pagina html no momento desejado do teste */
@@ -35,7 +38,7 @@ describe('Expert', () => {
         cy.get('#email').type('papito@webdojo.com')
         cy.get('#password').type('katana321{Enter}')
 
-    
+
         cy.get('[data-sonner-toaster=true]')
             .should('be.visible')
             .as('toast')
@@ -55,5 +58,17 @@ describe('Expert', () => {
 
         cy.get('#email').press('Tab')
         cy.focused().should('have.attr', 'id', 'password')
+    })
+
+    it('Deve realizar uma carga de dados fakes', () => {
+        _.times(5, () => {
+            const name = faker.person.fullName()
+            const email = faker.internet.email()
+            const password = 'pwd123'
+
+            cy.log(name)
+            cy.log(email)
+            cy.log(password)
+        })
     })
 })
