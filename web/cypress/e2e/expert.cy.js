@@ -24,7 +24,7 @@ describe('Expert', () => {
     })
 
     it.only('Não deve logar com senha inválida', () => {
-        cy.submitLoginForm('papito@webdojo.com', 'katana321')
+        // cy.submitLoginForm('papito@webdojo.com', 'katana321')
 
         /* tecnica para salvar a pagina html no momento desejado do teste */
         // cy.wait(2500)
@@ -32,6 +32,10 @@ describe('Expert', () => {
         //     cy.writeFile('cypress/downloads/page.html', doc.documentElement.outerHTML)
         // })
 
+        cy.get('#email').type('papito@webdojo.com')
+        cy.get('#password').type('katana321{Enter}')
+
+    
         cy.get('[data-sonner-toaster=true]')
             .should('be.visible')
             .as('toast')
@@ -43,5 +47,13 @@ describe('Expert', () => {
         cy.wait(5000)
         cy.get('@toast')
             .should('not.exist')
+    })
+
+    it('Simulando a tecla TAB com cy.press()', () => {
+        cy.get('body').press('Tab')
+        cy.focused().should('have.attr', 'id', 'email')
+
+        cy.get('#email').press('Tab')
+        cy.focused().should('have.attr', 'id', 'password')
     })
 })
